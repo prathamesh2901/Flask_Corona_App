@@ -22,9 +22,10 @@ def create_table():
 
 jwt = JWT(app, authenticate, identity) #/auth
 
-api.add_resource(Countries, '/')
+api.add_resource(Countries, '/countries')
 api.add_resource(Country, '/country/<string:name>')
 api.add_resource(State, '/state/<string:country>/<string:name>')
+api.add_resource(States, '/states')
 
 if __name__ == '__main__':
     from db import db

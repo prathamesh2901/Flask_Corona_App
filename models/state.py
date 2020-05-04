@@ -17,7 +17,7 @@ class StateModel(db.Model):
         self.recoveries = recoveries
 
     def json(self):
-        return {'name': self.name, 'price': self.price}
+        return {'name': self.name, 'cases': self.cases, 'deaths': self.deaths, 'recoveries': self.recoveries}
 
     @classmethod
     def find_by_state(cls, name):
